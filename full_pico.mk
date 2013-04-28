@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/lib/hw/camera.msm7627a.so:system/lib/hw/camera.msm7627a.so \
+    vendor/htc/pico/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.msm7627a.so \
     vendor/htc/pico/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
     vendor/htc/pico/proprietary/lib/libmmipl.so:system/lib/libmmipl.so \
     vendor/htc/pico/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
@@ -99,7 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/lib/hw/sensors.msm7627a.so:system/lib/hw/sensors.msm7627a.so \
+    vendor/htc/pico/proprietary/lib/hw/sensors.pico.so:system/lib/hw/sensors.msm7627a.so \
 
 # 3D(ICS Blobs)
 PRODUCT_COPY_FILES += \

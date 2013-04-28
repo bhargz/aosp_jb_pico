@@ -89,13 +89,13 @@ CURL += curl
 E2FSPROGS := e2fsck
 
 #GPS
-GPS_HARDWARE := gps.default
-GPS_HARDWARE += gps.mahimahi
-GPS_HARDWARE += gps.msm7627a
-GPS_HARDWARE += libloc_adapter
-GPS_HARDWARE += libgps.utils
-GPS_HARDWARE += libloc_eng
-GPS_HARDWARE += libloc_api_v02
+#GPS_HARDWARE := gps.default
+#GPS_HARDWARE += gps.mahimahi
+#GPS_HARDWARE += gps.msm7627a
+#GPS_HARDWARE += libloc_adapter
+#GPS_HARDWARE += libgps.utils
+#GPS_HARDWARE += libloc_eng
+#GPS_HARDWARE += libloc_api_v02
 
 #HDMID
 HDMID := hdmid
@@ -198,6 +198,7 @@ LIBCAMERA += camera.msm7630_fusion
 LIBCAMERA += camera.msm7627a
 LIBCAMERA += libmmcamera_interface2
 LIBCAMERA += libmmjpeg_interface
+LIBCAMERA += camera.default
 
 #LIBCOPYBIT
 LIBCOPYBIT := copybit.msm8660
@@ -277,10 +278,10 @@ LIBQDMETADATA := libqdMetaData
 
 #LLVM for RenderScript
 #use qcom LLVM
-$(call inherit-product, external/llvm/llvm-select.mk)
+#$(call inherit-product, external/llvm/llvm-select.mk)
 
 #LOC_API
-LOC_API := libloc_api-rpc-qc
+#LOC_API := libloc_api-rpc-qc
 
 #MEDIA_PROFILES
 MEDIA_PROFILES := media_profiles.xml
@@ -446,7 +447,7 @@ PRODUCT_PACKAGES += $(CONNECTIVITY)
 PRODUCT_PACKAGES += $(CHARGER)
 PRODUCT_PACKAGES += $(CURL)
 PRODUCT_PACKAGES += $(E2FSPROGS)
-PRODUCT_PACKAGES += $(GPS_HARDWARE)
+#PRODUCT_PACKAGES += $(GPS_HARDWARE)
 PRODUCT_PACKAGES += $(HDMID)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(I420CC)
@@ -524,16 +525,16 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
     system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
     system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
-    system/bluetooth/data/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
+#   system/bluetooth/data/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
     system/bluetooth/data/input.conf:system/etc/bluetooth/input.conf \
     system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf \
 
-PRODUCT_COPY_FILES += device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
+#PRODUCT_COPY_FILES += device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
+#                      device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # enable overlays to use our version of
 # source/resources etc.
-PRODUCT_PACKAGE_OVERLAYS := device/qcom/common/overlay
+#PRODUCT_PACKAGE_OVERLAYS := device/qcom/common/overlay
 
 # include additional build utilities
 -include device/qcom/common/utils.mk
